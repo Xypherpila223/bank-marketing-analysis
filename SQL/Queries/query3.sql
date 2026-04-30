@@ -37,15 +37,12 @@ ORDER BY
         WHEN 'oct' THEN 10 WHEN 'nov' THEN 11 WHEN 'dec' THEN 12 
     END;
 
-
--- KPI Global Campaign Summary
--- Author: John Butch Gromontil
--- Date: 2026-03-21
+ 
+--  Global Campaign Summary
 /*
 -- Summarizes high-level success metrics for the entire dataset.
 -- Purpose: Quick reference for total reach and final conversion percentage.
 -- Table: bank
--- Used as Header KPI Cards for Executive Summaries
 */
 
 SELECT 
