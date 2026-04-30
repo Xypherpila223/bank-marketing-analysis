@@ -153,28 +153,29 @@ bank-marketing-analysis/
 │   ├── raw/
 │   │   └── bank.csv
 │   └── exports/
-│       ├── ps1_campaign_overview.csv
-│       ├── ps2_contact_type.csv
-│       ├── ps2_month_contact.csv
+│       ├── Call_Effiency.csv
+│       ├── House_Loan_Balance_Conversion.csv
+│       ├── Monthly_Calls_Conversion_Rate.csv
 │       ├── ps2_age_group.csv
+│       ├── ps2_contact_type.csv
 │       ├── ps2_job.csv
-│       ├── ps2_education.csv
-│       └── ps2_marital.csv
+│       ├── ps2_marital.csv
+│       └── ps2_month_contact.csv
 │
 ├── sql/
-│   ├── ps1_campaign_overview.sql
-│   ├── ps2_contact_type.sql
-│   ├── ps2_month_contact.sql
-│   ├── ps2_customer_profile.sql
-│   ├── ps3_contact_strategy.sql
-│   └── ps4_channel_analysis.sql
+│   ├── Bank_Analysis.sql
+│   ├── Customer_Count_Call_Analysis.sql
+│   ├── Customer_Demographics_Validations.sql
+│   ├── Data_Validation.sql
+│   ├── Deposits_Validation.sql
+│   └── Month_on_Month_Analysis.sql
 │
 ├── tableau/
-│   ├── bank_marketing_dashboard.twbx
-│   └── dashboard_preview.png
+│   ├── Bank Data Analysis.twbx
+│   └── Bank_Campaign_Analysis.png
 │
 └── insights/
-    └── findings_and_recommendations.md
+    └── Insights_Recommendation.md
 ```
 
 ---
