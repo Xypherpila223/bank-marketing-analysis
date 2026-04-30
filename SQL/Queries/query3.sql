@@ -1,24 +1,18 @@
-SELECT 
-    'New Customer (First Contact)' AS customer_segment,
-    COUNT(*) AS customer_count,
-    AVG(duration) AS avg_talk_time
-FROM bank
-WHERE pdays = -1 AND campaign >= 1
+-- KPI Month-on-Month Performance Analysis
+-- Author: John Butch Gromontil
+-- Date: 2026-03-21
+/*
+-- Analyzes monthly call volume and subscription rates compared to global averages.
+-- Purpose: Identify seasonal trends and peak performance months for campaign optimization.
+-- Table: bank
+-- Used for Monthly Trend Line Charts and Performance Benchmarking
+*/
 
-UNION ALL
+-- Step 1: Audit available months
+SELECT DISTINCT(month)
+FROM bank; 
 
-SELECT 
-    'Returning Customer (Follow-up)' AS customer_segment,
-    COUNT(*) AS customer_count,
-    AVG(duration) AS avg_talk_time
-FROM bank
-WHERE pdays != -1 AND campaign >= 1;
-
-
-select distinct(month)
-from bank; 
-
-
+-- Step 2: Comparative Monthly vs. Overall Statistics
 WITH CampaignStats AS (
     SELECT 
         COUNT(*) AS total_contacted,
@@ -26,6 +20,7 @@ WITH CampaignStats AS (
         (COUNT(CASE WHEN deposit = 'yes' THEN 1 END) * 100.0 / COUNT(*)) AS overall_subscription_rate
     FROM bank
 )
+
 SELECT 
     month,
     COUNT(*) AS monthly_calls,
@@ -43,8 +38,17 @@ ORDER BY
     END;
 
 
+-- KPI Global Campaign Summary
+-- Author: John Butch Gromontil
+-- Date: 2026-03-21
+/*
+-- Summarizes high-level success metrics for the entire dataset.
+-- Purpose: Quick reference for total reach and final conversion percentage.
+-- Table: bank
+-- Used as Header KPI Cards for Executive Summaries
+*/
 
-	SELECT 
+SELECT 
     COUNT(*) AS total_contacted,
     COUNT(CASE WHEN deposit = 'yes' THEN 1 END) AS total_subscribed,
     ROUND(COUNT(CASE WHEN deposit = 'yes' THEN 1 END) * 100.0 / COUNT(*), 2) AS overall_rate
