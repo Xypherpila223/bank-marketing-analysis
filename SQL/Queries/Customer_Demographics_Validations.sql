@@ -1,4 +1,5 @@
 -- KPI Demographic Success Analysis
+-- Author: John Butch Gromontil
 -- Date: 2026-03-21
 /*
 -- Segments customers into age brackets and calculates the subscription success rate per group.
