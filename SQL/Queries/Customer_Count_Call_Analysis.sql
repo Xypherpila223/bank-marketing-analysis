@@ -44,27 +44,31 @@ FROM bank
 GROUP BY pdays
 ORDER BY pdays ASC;
 
--- Engagement Analysis (New vs. Repeat Leads)
+
+
+-- Engagement Analysis (Segmented Comparison)
 -- Author: John Butch Gromontil
 -- Date: 2026-03-21
 /*
--- Compares talk time between new and repeat leads, converting seconds to minutes.
--- Purpose: Evaluate engagement efficiency by normalizing duration into a readable format.
+-- Compares new vs. returning customers in a single view for faster reading.
+-- Purpose: Evaluate engagement metrics (count and talk time) across different segments.
 -- Table: bank
--- Used for A/B Testing and Efficiency Analysis
+-- Used for Comparison Tables in Dashboards
 */
 
--- Metric for New Leads (Never contacted before)
 SELECT 
-    COUNT(*) AS current_contacts, 
+    'New Customer (First Contact)' AS customer_segment,
+    COUNT(*) AS customer_count,
     AVG(duration) AS avg_talk_time_secs,
     AVG(duration) / 60.0 AS avg_talk_time_mins
 FROM bank
-WHERE pdays = -1 AND campaign >= 1; 
+WHERE pdays = -1 AND campaign >= 1
 
--- Metric for Repeat Leads (Contacted in previous campaigns)
+UNION ALL
+
 SELECT 
-    COUNT(*) AS past_contacts, 
+    'Returning Customer (Follow-up)' AS customer_segment,
+    COUNT(*) AS customer_count,
     AVG(duration) AS avg_talk_time_secs,
     AVG(duration) / 60.0 AS avg_talk_time_mins
 FROM bank
