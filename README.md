@@ -181,6 +181,6 @@ bank-marketing-analysis/
 
 ## 👤 Author
 **John Butch Gromontil**
-- 🔗 [LinkedIn](your-linkedin-link)
-- 📊 [Tableau Public](your-tableau-public-link)
-- 🐙 [GitHub](your-github-link)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/johnbutchgromontil/)
+- 📊 [Tableau Public](https://public.tableau.com/views/BankDataAnalysis_17762651796660/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- 🐙 [GitHub](https://github.com/Xypherpila223)
