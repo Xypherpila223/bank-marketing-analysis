@@ -19,8 +19,8 @@ future campaign strategy.
 ---
 
 ## 📈 Dashboard Preview
-![Bank Marketing Dashboard](tableau/dashboard_preview.png)
-> 🔗 [View Live Tableau Dashboard](your-tableau-public-link-here)
+![Bank Marketing Dashboard](tableau/Bank_Campaign_Analysis.png)
+> 🔗 [View Live Tableau Dashboard]([your-tableau-public-link-here](https://public.tableau.com/views/BankDataAnalysis_17762651796660/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))
 
 ---
 
